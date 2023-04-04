@@ -2,23 +2,20 @@ import { Campo, Conteudo, Fundo,Titulo } from "./styled/Layout";
 import "./public.css"
 import axios from "axios";
 import { useState,useEffect } from "react";
+import Pessoa from "./components/Pessoa.jsx";
 function App() {
   const [pessoas,setPessoas] = useState([]);
   const url = "https://randomuser.me/api/?results=10"
   useEffect(()=>{
-    axios.get(url).then(res=>console.log(res))
+    axios.get(url).then(res=>setPessoas(res.data.results))
+    .catch("deu erro pra pegar os dados da API")
   },[])
 
   return (
     <Fundo>
       <Titulo>Styled Components</Titulo>
       <Campo>
-        <Conteudo>
-          sushi é deliciushh
-        </Conteudo>
-        <Conteudo>
-          porg é brabaço
-        </Conteudo>
+        {pessoas.map(p=><Pessoa key={p.id} {...p}/>)}
       </Campo>
     </Fundo>
   );
