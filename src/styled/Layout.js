@@ -12,3 +12,15 @@ color:#2da9f3;
 font-size: 32pt;
 padding: 32px 0;
 text-align: center`;
+
+export const Campo = styled.div`
+background:#303741;
+border-radius:16px;
+padding:16px;
+`;
+
+export const Conteudo = styled.div`
+background:#3b424c;
+border-radius:16px;
+padding:16px;
+margin-bottom:16px;`;
