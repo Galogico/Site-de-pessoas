@@ -24,3 +24,14 @@ background:#3b424c;
 border-radius:16px;
 padding:16px;
 margin-bottom:16px;`;
+
+export const NavbarStyle = styled.div`
+background:#F2913D;
+
+`
+
+export const Imagem = styled.img`
+width: 50px;
+height: 50px;
+border-radius: 50px;
+`
