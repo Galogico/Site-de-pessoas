@@ -28,10 +28,23 @@ margin-bottom:16px;`;
 export const NavbarStyle = styled.div`
 background:#F2913D;
 
-`
+`;
 
 export const Imagem = styled.img`
 width: 50px;
 height: 50px;
 border-radius: 50px;
-`
+`;
+
+export const DivFlex = styled.div`
+display:flex;
+flex-direction:row;
+align-items:center;
+justify-content:space-around;
+`;
+
+export const Info = styled.div`
+    display: flex;
+    flex-direction:row;
+    padding-left:40px;
+`;
